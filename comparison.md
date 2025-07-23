@@ -44,7 +44,7 @@ Testing was conducted on a local machine (Windows, home WiFi network) to benchma
      - `python bank_server.py` (listens on port 5000).
      - Run UPI machine script (listens on port 6001).
   2. Set `num_users=10000` in the main script.
-  3. Run the script in a third terminal: `python concurrent_script.py`.
+  3. Run the script in a third terminal: `python simulate_10000_users.py`.
   4. Asyncio gathers tasks for parallel registrations/transactions; results saved to `simulation_results.json`.
 - **Metrics Collection**: Timing via `time` module; failures simulated randomly per user.
 - **Runtime**: ~46 seconds, benefiting from parallel I/O (e.g., overlapping network calls).
